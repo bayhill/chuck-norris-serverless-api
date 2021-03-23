@@ -1,0 +1,19 @@
+{
+  "name": "sls-rest-api",
+  "version": "1.0.0",
+  "description": "Azure Functions sample for the Serverless framework",
+  "scripts": {
+    "test": "echo \"No tests yet...\"",
+    "start": "func host start"
+  },
+  "keywords": [
+    "azure",
+    "serverless"
+  ],
+  "devDependencies": {
+    "serverless-azure-functions": "^2.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.1"
+  }
+}

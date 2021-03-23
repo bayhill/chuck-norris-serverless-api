@@ -1,0 +1,35 @@
+service: sls-rest-api 
+ 
+provider:
+  name: azure
+  location: North Europe
+  runtime: nodejs10
+ 
+plugins:
+  - serverless-azure-functions
+ 
+package:
+  exclude:
+    - local.settings.json
+    - .vscode/**
+ 
+functions:
+  jokes:
+    handler: src/handlers/jokes.handler
+    events:
+      - http: true
+        method: get
+        x-azure-settings:
+          authLevel: anonymous
+        cors:
+            origin: '*'
+
+  fruits:
+    handler: src/handlers/fruits.handler
+    events:
+      - http: true
+        method: get
+        x-azure-settings:
+          authLevel: anonymous
+        cors:
+            origin: '*'
